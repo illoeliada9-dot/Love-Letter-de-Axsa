@@ -7,7 +7,34 @@ Interactive love letter
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Lettre pour Acsa ❤️</title>
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:10;
+}
 
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.photos img{
+cursor:pointer;
+transition:0.3s;
+}
+
+.photos img:hover{
+transform:scale(1.05);
+}
+  
 <style>
 
 *{
@@ -224,13 +251,13 @@ ces moments qui rendent ce lien précieux.
 
 <div class="photos">
 
-<img src="IMG-20260514-WA0011.jpg" alt="Souvenir 1">
+<img src="IMG-20260514-WA0011.jpg" onclick="zoomImage(this)" alt="Souvenir 1">
 
-<img src="IMG-20260514-WA0012.jpg" alt="Souvenir 2">
+<img src="IMG-20260514-WA0012.jpg" onclick="zoomImage(this)" alt="Souvenir 2">
 
-<img src="IMG-20260520-WA0013.jpg" alt="Souvenir 3">
+<img src="IMG-20260520-WA0013.jpg" onclick="zoomImage(this)" alt="Souvenir 3”>
 
-<img src="IMG-20260515-WA0017.jpg" alt="Souvenir 4">
+<img src="IMG-20260515-WA0017.jpg" onclick="zoomImage(this)" alt="Souvenir 4">
 
 </div>
 
@@ -309,7 +336,11 @@ Que cette lettre garde une trace de nos souvenirs.
 
 </div>
 
+<div class="lightbox" id="lightbox" onclick="closeImage()">
 
+<img id="bigImage">
+
+</div>
 
 <script>
 
@@ -348,6 +379,21 @@ music.pause();
 }
 
 }
+  function zoomImage(img){
+
+document.getElementById("bigImage").src = img.src;
+
+document.getElementById("lightbox").style.display="flex";
+
+}
+
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+  
 
 </script>
 
