@@ -34,6 +34,16 @@ transition:0.3s;
 .photos img:hover{
 transform:scale(1.05);
 }
+.event{
+opacity:0;
+transform:translateX(-40px);
+transition:1s;
+}
+
+.event.visible{
+opacity:1;
+transform:translateX(0);
+}  
   
 <style>
 
@@ -393,7 +403,23 @@ document.getElementById("lightbox").style.display="none";
   
 
 </script>
+const events = document.querySelectorAll(".event");
 
+window.addEventListener("scroll", ()=>{
+
+events.forEach(event=>{
+
+let position = event.getBoundingClientRect().top;
+
+if(position < window.innerHeight - 100){
+
+event.classList.add("visible");
+
+}
+
+});
+
+});
 
 </body>
 
