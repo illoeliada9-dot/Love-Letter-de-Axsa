@@ -297,10 +297,10 @@ Aujourd’hui, ces quelques pages numériques sont une façon de te dire simplem
 <img src="IMG-20260520-WA0013.jpg" onclick="zoomImage(this)" alt="Souvenir 4">
 
 </div>
-  
+</script>
+  <style>
 </div>
 <div class="section">
-
   
 <h2>Notre histoire ⏳</h2>
 
@@ -313,8 +313,6 @@ Le jour où nos chemins se sont croisés pour la première fois.
 Sans imaginer ce que l'avenir nous réservait, une belle histoire commençait discrètement.
 </p>
 </div>
-  
-</script>
   
 <div class="event">
 <strong>11 Mai 2026</strong>
@@ -443,7 +441,7 @@ document.getElementById("lightbox").style.display="none";
 
 }
 </script> 
-
+<style>
 const events = document.querySelectorAll(".event");
 
 window.addEventListener("scroll", ()=>{
@@ -455,7 +453,7 @@ let position = event.getBoundingClientRect().top;
 if(position < window.innerHeight - 100){
 
 event.classList.add("visible");
-
+<style>
 }
 
 });
