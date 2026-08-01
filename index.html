@@ -3,13 +3,87 @@ Interactive love letter
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lettre interactive pour Acsa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lettre pour Acsa ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffd6e7, #fff5f8);
+  font-family: "Georgia", serif;
+}
+
+.letter {
+  width: 85%;
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: apparition 2s ease;
+}
+
+h1 {
+  color: #c2185b;
+}
+
+p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.heart {
+  font-size: 45px;
+  animation: battement 1.5s infinite;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes battement {
+  50% {
+    transform: scale(1.2);
+  }
+}
+</style>
+
 </head>
 
 <body>
-  <h1>Pour Acsa ❤️</h1>
-  <p>Une lettre numérique remplie de souvenirs et de moments précieux.</p>
+
+<div class="letter">
+
+<div class="heart">❤️</div>
+
+<h1>Pour Acsa</h1>
+
+<p>
+Une lettre numérique créée avec sincérité,
+pour conserver des souvenirs précieux et célébrer
+une personne spéciale.
+</p>
+
+<p>
+Chaque moment partagé possède une valeur unique.
+</p>
+
+</div>
+
 </body>
 </html>
