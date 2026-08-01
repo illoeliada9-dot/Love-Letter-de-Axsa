@@ -44,7 +44,28 @@ transition:1s;
 opacity:1;
 transform:translateX(0);
 }  
-  
+.signature{
+font-size:28px;
+color:#c2185b;
+text-align:center;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}  
 <style>
 
 *{
@@ -333,8 +354,8 @@ Merci pour ta présence, ta gentillesse et tous les moments partagés Ma Demoise
 <p>
 Que cette lettre garde une trace de nos souvenirs.
 </p>
-
-<h2>
+  
+<h2 class="signature">
 ❤️ Acsa ❤️
 </h2>
 
